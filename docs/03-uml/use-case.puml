@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor "Гість" as Guest
+actor "Адміністратор" as Admin
+
+rectangle "ІС Управління готелем" {
+  usecase "Пошук вільних номерів" as UC1
+  usecase "Створення бронювання" as UC2
+  usecase "Заселення (Check-in)" as UC3
+  usecase "Виселення та розрахунок (Check-out)" as UC4
+  usecase "Замовлення додаткових послуг" as UC5
+}
+
+Guest --> UC1
+Guest --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+@enduml
