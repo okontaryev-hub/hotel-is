@@ -7,6 +7,7 @@ entity "Guest" {
   email : string
 }
 
+
 entity "Room" {
   * room_id : int <<PK>>
   --
