@@ -1,0 +1,18 @@
+# Системні файли macOS та Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Налаштування IDE та редакторів
+.vscode/
+.idea/
+*.swp
+
+# Конфіденційні файли та оточення
+.env
+*.pem
+*.key
+
+# Тимчасові файли
+*.tmp
+*.log
