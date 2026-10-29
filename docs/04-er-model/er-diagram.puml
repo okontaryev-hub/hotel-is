@@ -1,0 +1,40 @@
+@startuml
+entity "Guest" {
+  * guest_id : int <<PK>>
+  --
+  full_name : string
+  phone : string
+  email : string
+}
+
+entity "Room" {
+  * room_id : int <<PK>>
+  --
+  room_number : string
+  category : string
+  price_per_night : decimal
+  status : string
+}
+
+entity "Booking" {
+  * booking_id : int <<PK>>
+  --
+  * guest_id : int <<FK>>
+  * room_id : int <<FK>>
+  check_in_date : date
+  check_out_date : date
+  total_price : decimal
+  status : string
+}
+
+entity "Service" {
+  * service_id : int <<PK>>
+  --
+  service_name : string
+  price : decimal
+}
+
+Guest ||--o{ Booking
+Room ||--o{ Booking
+Booking }o--o{ Service
+@enduml
